@@ -115,7 +115,7 @@ app.post('/users/login', async (req, res) => {
 });
 
 app.get('/users/courses', authenticateJwt, async (req, res) => {
-  const courses = await Course.find({published: true});
+  const courses = await Course.find();
   res.json({ courses });
 });
 

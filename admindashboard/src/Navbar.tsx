@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Link } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-
+import logo from './assets/coursera-logo.png'
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
 
@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
       <AppBar position="fixed" style={{ top: 0, left: 0, width: '100%', backgroundColor: '#333' }}>
         <Toolbar variant='dense' style={{display:'flex' ,justifyContent:'space-around'}}>
           <Typography variant="h6" component="div" >
-            Logo
+            <img src={logo} alt="Your Image" className="image" height={'50px'}/>
           </Typography>
           <Link  color="inherit" underline="none" onClick={() => handleNavigation('/')}>
             Home
